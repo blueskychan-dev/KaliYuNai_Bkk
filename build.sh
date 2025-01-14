@@ -44,7 +44,7 @@ if [ "$KernelSU" = true ]; then
     if [ "$SUSFS4KSU" = true ]; then
         echo "SUSFS4KSU is enabled. Cloning GalaxyBuild KernelSU-Next..."
         curl -LSs "https://raw.githubusercontent.com/galaxybuild-project/KernelSU-Next/next/kernel/setup.sh" | bash -
-        ensure_config arch/arm64/configs/$KERNEL_DEFCONFIG CONFIG_KSU CONFIG_KSU_SUSFS CONFIG_KSU_SUSFS_HAS_MAGIC_MOUNT CONFIG_KSU_SUSFS_SUS_PATH CONFIG_KSU_SUSFS_SUS_MOUNT CONFIG_KSU_SUSFS_SUS_KSTAT CONFIG_KSU_SUSFS_SUS_OVERLAYFS CONFIG_KSU_SUSFS_TRY_UMOUNT CONFIG_KSU_SUSFS_SPOOF_UNAME CONFIG_KSU_SUSFS_ENABLE_LOG CONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG CONFIG_KSU_SUSFS_OPEN_REDIRECT CONFIG_KSU_SUSFS_SUS_SU
+        ensure_config arch/arm64/configs/$KERNEL_DEFCONFIG CONFIG_KSU CONFIG_KSU_SUSFS
     else
         if [ ! -d "KernelSU" ]; then
             echo "KernelSU folder not found. Cloning..."
